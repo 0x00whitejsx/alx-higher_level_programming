@@ -3,16 +3,16 @@
 
 def safe_print_list_integers(my_list=[], x=0):
     """
-    print th list of anythng , but only print intergr here
-    returns the amount of interger printed
+    prints a list of anything, but only prints the integers
+    Returns the amount of integers printed
     """
     i = 0
-    printed = 0 
-    for i in range(0,x):
+    printed = 0
+    for i in range(0, x):
         try:
             print("{:d}".format(my_list[i]), end="")
             printed += 1
         except (ValueError, TypeError):
-            contiue
-        print()
-        return printed
+            continue
+    print()
+    return printed
